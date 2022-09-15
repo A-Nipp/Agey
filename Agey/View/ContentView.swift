@@ -11,16 +11,40 @@ struct ContentView: View {
     @StateObject var vm = AgeyViewModel()
     var body: some View {
         NavigationView {
-            VStack {
-                Text("\(vm.displayAge)")
-                TextField("Enter name", text: $vm.currentTextEntry)
-                Button("Fetch age") {
-                    Task {
-                        await vm.fetchAge()
+            ZStack {
+                MainViewBackground()
+                    .ignoresSafeArea()
+                VStack {
+                    Spacer()
+                    Text("Someone named **\(vm.displayName)** is about")
+                        
+                    
+                    Text("\(vm.displayAge)")
+                        .font(.system(size: 80))
+                        .fontWeight(.heavy)
+                        .padding(.horizontal, 15)
+
+                    Text("years old!")
+                    
+                    Spacer()
+                    
+                    TextField("Enter name", text: $vm.currentTextEntry)
+                        .padding(.horizontal, 5)
+                        .padding(.vertical)
+                        .background(.white, in: RoundedRectangle(cornerRadius: 10))
+                        .padding()
+                    Button("Fetch age") {
+                        Task {
+                            await vm.fetchAge()
+                        }
                     }
+                    .buttonStyle(.borderedProminent)
+                    Spacer()
+                    
                 }
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationTitle("Agey")
             }
-            .navigationTitle("Agey")
         }
     }
 }
