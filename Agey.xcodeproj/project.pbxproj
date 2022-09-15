@@ -15,6 +15,7 @@
 		16AB59FD28D2BA730022501D /* AgeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB59FC28D2BA730022501D /* AgeyViewModel.swift */; };
 		16AB59FF28D2BB8B0022501D /* AgifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB59FE28D2BB8B0022501D /* AgifyService.swift */; };
 		16AB5A0128D3721B0022501D /* MainViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB5A0028D3721B0022501D /* MainViewBackground.swift */; };
+		16C6B80928D3CE0400165FB2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C6B80828D3CE0400165FB2 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		16AB59FC28D2BA730022501D /* AgeyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeyViewModel.swift; sourceTree = "<group>"; };
 		16AB59FE28D2BB8B0022501D /* AgifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgifyService.swift; sourceTree = "<group>"; };
 		16AB5A0028D3721B0022501D /* MainViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewBackground.swift; sourceTree = "<group>"; };
+		16C6B80828D3CE0400165FB2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				16AB59EB28D2B5490022501D /* ContentView.swift */,
 				16AB5A0028D3721B0022501D /* MainViewBackground.swift */,
+				16C6B80828D3CE0400165FB2 /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16C6B80928D3CE0400165FB2 /* SettingsView.swift in Sources */,
 				16AB59FD28D2BA730022501D /* AgeyViewModel.swift in Sources */,
 				16AB5A0128D3721B0022501D /* MainViewBackground.swift in Sources */,
 				16AB59FF28D2BB8B0022501D /* AgifyService.swift in Sources */,
