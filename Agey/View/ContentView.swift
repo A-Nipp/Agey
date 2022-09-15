@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text(vm.currentAge ?? "No Results")
+                Text("\(vm.displayAge)")
                 TextField("Enter name", text: $vm.currentTextEntry)
                 Button("Fetch age") {
                     Task {

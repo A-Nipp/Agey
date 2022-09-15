@@ -9,7 +9,7 @@ import Foundation
 
 class AgifyService {
     
-    func fetchAge(queryName: String) async -> AgifyResponse {
+    static func fetchAge(queryName: String) async throws -> AgifyResponse {
         var components = URLComponents()
         components.scheme = "https"
         components.host = "agify.io"
@@ -20,13 +20,10 @@ class AgifyService {
         
         guard let url = components.url else { return AgifyResponse.example }
         
-        do {
-            let (data, _) = try await URLSession.shared.data(from: url)
-            let nameData = try JSONDecoder().decode(AgifyResponse.self, from: data)
-            return nameData
-        } catch {
-            return AgifyResponse.example
-        }
+        let (data, _) = try await URLSession.shared.data(from: url)
+        let nameData = try JSONDecoder().decode(AgifyResponse.self, from: data)
+        return nameData
+        
         
     }
 }
