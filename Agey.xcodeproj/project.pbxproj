@@ -61,7 +61,6 @@
 				16AB59F828D2B6010022501D /* View */,
 				16AB59F728D2B5EB0022501D /* Model */,
 				16AB59E928D2B5490022501D /* AgeyApp.swift */,
-				16AB59EB28D2B5490022501D /* ContentView.swift */,
 				16AB59ED28D2B54B0022501D /* Assets.xcassets */,
 				16AB59EF28D2B54B0022501D /* Preview Content */,
 			);
@@ -88,6 +87,7 @@
 		16AB59F828D2B6010022501D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				16AB59EB28D2B5490022501D /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
