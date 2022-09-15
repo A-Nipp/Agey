@@ -46,17 +46,26 @@ struct ContentView_Previews: PreviewProvider {
 struct AgeResultDisplay: View {
     @ObservedObject var vm: AgeyViewModel
     var body: some View {
-        VStack {
-            Text("Someone named **\(vm.displayName)** is about")
-            
-            Text("\(vm.displayAge)")
-                .font(.system(size: 80))
+        if vm.currentData != nil {
+            VStack {
+                Text("Someone named **\(vm.displayName)** is about")
+                
+                Text("\(vm.displayAge)")
+                    .font(.system(size: 80))
+                    .fontWeight(.heavy)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 15)
+                
+                Text("years old!")
+            }
+        }
+        else {
+            Text("Enter a name below to predict the age!")
+                .font(.largeTitle)
                 .fontWeight(.heavy)
                 .multilineTextAlignment(.center)
-                .padding(.horizontal, 15)
-            
-            Text("years old!")
         }
+        
     }
 }
 
