@@ -10,13 +10,14 @@ import Foundation
 class AgeyViewModel: ObservableObject {
     @Published var currentTextEntry: String
     @Published var currentData: AgifyResponse?
+    
     var displayAge: String {
         if currentData != nil {
-            return String(currentData!.age)
+            if currentData!.age != nil {
+                return String(currentData!.age!)
+            }
         }
-        else {
-            return "No Data"
-        }
+        return "No Data"
     }
     
     var displayName: String {
@@ -27,7 +28,7 @@ class AgeyViewModel: ObservableObject {
             return "No Name"
         }
     }
-
+    
     init() {
         self.currentTextEntry = ""
         self.currentData = nil

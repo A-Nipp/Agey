@@ -9,7 +9,7 @@ import Foundation
 
 struct AgifyResponse: Codable {
     let name: String
-    let age: Int
+    let age: Int?
     let count: Int
 }
 
