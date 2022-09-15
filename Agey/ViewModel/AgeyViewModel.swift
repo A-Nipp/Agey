@@ -30,7 +30,7 @@ class AgeyViewModel: ObservableObject {
             currentData = try await AgifyService.fetchAge(queryName: currentTextEntry)
         }
         catch {
-            print(error.localizedDescription)
+            print(String(describing: error))
             currentData = nil
         }
     }
