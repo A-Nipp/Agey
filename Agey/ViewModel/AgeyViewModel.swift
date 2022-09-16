@@ -12,6 +12,7 @@ class AgeyViewModel: ObservableObject {
     @Published var currentData: AgifyResponse?
     @Published var currentLocaleCode: String
     @Published var showCounts: Bool
+    @Published var savedNames: [AgifyResponse]
     var displayAge: String {
         if currentData != nil {
             if currentData!.age != nil {
@@ -35,6 +36,7 @@ class AgeyViewModel: ObservableObject {
         self.currentData = nil
         self.currentLocaleCode = Locale.current.regionCode ?? "US"
         self.showCounts = false
+        self.savedNames = []
     }
     
     func fetchAge() async {

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		167FF77A28D4EF9C0013B400 /* BarChartCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167FF77928D4EF9C0013B400 /* BarChartCellView.swift */; };
+		167FF77C28D4F0800013B400 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167FF77B28D4F0800013B400 /* BarChartView.swift */; };
+		167FF77E28D4F0BB0013B400 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167FF77D28D4F0BB0013B400 /* ChartData.swift */; };
 		16AB59EA28D2B5490022501D /* AgeyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB59E928D2B5490022501D /* AgeyApp.swift */; };
 		16AB59EC28D2B5490022501D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB59EB28D2B5490022501D /* ContentView.swift */; };
 		16AB59EE28D2B54B0022501D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16AB59ED28D2B54B0022501D /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		167FF77928D4EF9C0013B400 /* BarChartCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartCellView.swift; sourceTree = "<group>"; };
+		167FF77B28D4F0800013B400 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
+		167FF77D28D4F0BB0013B400 /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 		16AB59E628D2B5490022501D /* Agey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16AB59E928D2B5490022501D /* AgeyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeyApp.swift; sourceTree = "<group>"; };
 		16AB59EB28D2B5490022501D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +48,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		167FF77828D4EF7F0013B400 /* BarChart */ = {
+			isa = PBXGroup;
+			children = (
+				167FF77928D4EF9C0013B400 /* BarChartCellView.swift */,
+				167FF77B28D4F0800013B400 /* BarChartView.swift */,
+				167FF77D28D4F0BB0013B400 /* ChartData.swift */,
+			);
+			path = BarChart;
+			sourceTree = "<group>";
+		};
 		16AB59DD28D2B5490022501D = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +107,7 @@
 		16AB59F828D2B6010022501D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				167FF77828D4EF7F0013B400 /* BarChart */,
 				16AB59EB28D2B5490022501D /* ContentView.swift */,
 				16AB5A0028D3721B0022501D /* MainViewBackground.swift */,
 				16C6B80828D3CE0400165FB2 /* SettingsView.swift */,
@@ -179,7 +196,10 @@
 				16C6B80928D3CE0400165FB2 /* SettingsView.swift in Sources */,
 				16AB59FD28D2BA730022501D /* AgeyViewModel.swift in Sources */,
 				16AB5A0128D3721B0022501D /* MainViewBackground.swift in Sources */,
+				167FF77A28D4EF9C0013B400 /* BarChartCellView.swift in Sources */,
 				16AB59FF28D2BB8B0022501D /* AgifyService.swift in Sources */,
+				167FF77C28D4F0800013B400 /* BarChartView.swift in Sources */,
+				167FF77E28D4F0BB0013B400 /* ChartData.swift in Sources */,
 				16AB59FB28D2B9E10022501D /* AgifyResponse.swift in Sources */,
 				16AB59EC28D2B5490022501D /* ContentView.swift in Sources */,
 				16AB59EA28D2B5490022501D /* AgeyApp.swift in Sources */,
