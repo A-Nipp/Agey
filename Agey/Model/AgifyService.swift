@@ -9,12 +9,12 @@ import Foundation
 
 class AgifyService {
     
-    static func fetchAge(queryName: String) async throws -> AgifyResponse {
+    static func fetchAge(queryName: String, queryCountry: String) async throws -> AgifyResponse {
         var components = URLComponents()
         components.scheme = "https"
         components.host = "api.agify.io"
         let queryItemQuery = URLQueryItem(name: "name", value: queryName)
-        let queryItemCountry = URLQueryItem(name: "country_id", value: "US")
+        let queryItemCountry = URLQueryItem(name: "country_id", value: queryCountry)
         
         components.queryItems = [queryItemQuery, queryItemCountry]
         

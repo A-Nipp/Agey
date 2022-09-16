@@ -10,7 +10,8 @@ import Foundation
 class AgeyViewModel: ObservableObject {
     @Published var currentTextEntry: String
     @Published var currentData: AgifyResponse?
-    @Published var currentLocale: Locale
+    @Published var currentLocaleCode: String
+    @Published var showCounts: Bool
     var displayAge: String {
         if currentData != nil {
             if currentData!.age != nil {
@@ -32,12 +33,13 @@ class AgeyViewModel: ObservableObject {
     init() {
         self.currentTextEntry = ""
         self.currentData = nil
-        self.currentLocale = Locale.current
+        self.currentLocaleCode = Locale.current.regionCode ?? "US"
+        self.showCounts = false
     }
     
     func fetchAge() async {
         do {
-            currentData = try await AgifyService.fetchAge(queryName: currentTextEntry)
+            currentData = try await AgifyService.fetchAge(queryName: currentTextEntry, queryCountry: currentLocaleCode)
         }
         catch {
             print(String(describing: error))

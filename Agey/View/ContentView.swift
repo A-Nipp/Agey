@@ -31,6 +31,17 @@ struct ContentView: View {
                 }
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationTitle("Agey")
+                .toolbar {
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        NavigationLink(destination: {
+                            SettingsView(vm:vm)
+                        }, label: {
+                            Image(systemName: "gear")
+                                .foregroundColor(.secondary)
+                        })
+                        
+                    }
+                }
             }
         }
     }
