@@ -9,6 +9,10 @@ import SwiftUI
 
 struct MainView: View {
     @StateObject var vm = AgeyViewModel()
+    init() {
+        UITabBar.appearance().unselectedItemTintColor = UIColor.secondaryLabel
+        UITabBar.appearance().tintColor = UIColor.secondaryLabel
+    }
     var body: some View {
         TabView {
             ContentView(vm: vm)
@@ -20,6 +24,7 @@ struct MainView: View {
                     Label("Data", systemImage: "chart.bar.xaxis")
                 }
         }
+        .accentColor(.primary)
     }
 }
 
