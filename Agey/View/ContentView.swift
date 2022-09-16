@@ -72,6 +72,11 @@ struct AgeResultDisplay: View {
                     .padding(.horizontal, 15)
                 
                 Text("years old!")
+                if vm.showCounts && vm.currentData != nil {
+                    Text("Count: \(vm.currentData!.count)")
+                        .font(.caption)
+                        .padding(.vertical)
+                }
             }
         }
         else {
