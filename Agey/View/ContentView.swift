@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var vm = AgeyViewModel()
+    @ObservedObject var vm: AgeyViewModel
     var body: some View {
         NavigationView {
             ZStack {
@@ -25,6 +25,10 @@ struct ContentView: View {
                     NameInputField(vm: vm)
                     
                     FetchResultsButton(vm: vm)
+                    
+                    if vm.currentData != nil {
+                        SaveButton(vm: vm)
+                    }
                     
                     Spacer()
                     
@@ -49,7 +53,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(vm: AgeyViewModel.example)
     }
 }
 
@@ -114,6 +118,22 @@ struct FetchResultsButton: View {
                 .padding(10)
                 .padding(.horizontal, 15)
                 .background(Color.blue, in: Capsule())
+        })
+    }
+}
+
+struct SaveButton: View {
+    @ObservedObject var vm: AgeyViewModel
+    var body: some View {
+        Button(action: {
+            vm.saveCurrentName()
+        }, label: {
+            Text("Save Data")
+                .font(.title3)
+                .foregroundColor(.primary)
+                .padding(10)
+                .padding(.horizontal, 15)
+                .background(Color.mint, in: Capsule())
         })
     }
 }

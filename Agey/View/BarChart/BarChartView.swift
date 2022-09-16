@@ -44,6 +44,7 @@ struct BarChartView: View {
         VStack {
             Text(title)
                 .font(.largeTitle)
+                .padding()
                 HStack {
                     //cells
                     ForEach(normalizedData, id:\.label) { point in
@@ -56,9 +57,10 @@ struct BarChartView: View {
                         }
                     }
                 }
-                // Axes
+                .padding()
 
         }
+        .background(Color.secondary.opacity(0.2), in: RoundedRectangle(cornerRadius: 10))
         .padding()
     }
 }

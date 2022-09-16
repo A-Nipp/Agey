@@ -49,6 +49,10 @@ class AgeyViewModel: ObservableObject {
         }
     }
     
+    func saveCurrentName() -> Void {
+        savedNames.append(currentData!)
+    }
+    
 }
 
 extension AgeyViewModel {
