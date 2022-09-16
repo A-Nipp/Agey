@@ -27,6 +27,9 @@ struct DataView: View {
             else {
                 BarChartView(title: "Ages by Name", legend: "idk", barColor: .blue, data: chartData, isSorted: isSorted)
                 Toggle("Sort data by age", isOn: $isSorted)
+                    .padding()
+                    .padding(.bottom)
+                
             }
             
         }
@@ -34,7 +37,12 @@ struct DataView: View {
 }
 
 struct DataView_Previews: PreviewProvider {
+    static var filled: AgeyViewModel {
+        let out = AgeyViewModel.example
+        out.savedNames = [AgifyResponse.example, AgifyResponse.example, AgifyResponse.example]
+        return out
+    }
     static var previews: some View {
-        DataView(vm: AgeyViewModel.example)
+        DataView(vm: filled)
     }
 }
